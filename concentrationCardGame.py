@@ -4,7 +4,7 @@ def shuffle_deck(deck):
     '''(list of str)->None
        Shuffles the given list of strings representing the playing deck    
     '''
-    # YOUR CODE GOES HERE
+    
     random.shuffle (deck)
     print("Shuffling the deck...\n")
     
@@ -48,7 +48,7 @@ def print_revealed(discovered, p1, p2, original_board):
     Prints the current board with the two new positions (p1 & p2) revealed from the original board
     Preconditions: p1 & p2 must be integers ranging from 1 to the length of the board
     '''
-    # YOUR CODE GOES HERE
+    
     for i in range(len(original_board)):
         if i == p1 - 1 or i == p2 -1:
             print('{0:4}'.format(original_board[i]), end=' ')
@@ -87,10 +87,6 @@ def clean_up_board(l):
     print("\nRemoving one of each cards that appears odd number of times and removing all stars ...\n")
     playable_board=[]
 
-    
-       
-
-    # YOUR CODE GOES HERE
     for i in l:
         if '*' in l:
             l.remove('*')
@@ -113,7 +109,6 @@ def is_rigorous(l):
     Precondition: Every element in the list appears even number of times
     '''
 
-    # YOUR CODE GOES HERE
     
     for i in range(len(l)):
         if l.count(l[i])!=2:
@@ -148,7 +143,6 @@ def play_game(board):
     print("Ready to play ...\n")
 
     # this is the funciton that plays the game
-    # YOUR CODE GOES HERE
     masked_board = build_board(board)
 
     print_board(masked_board)
@@ -196,7 +190,7 @@ def play_game(board):
     else:
         print('The resulting board is empty.\nPlaying concentration game with an empty board is impossible.\nGood Bye')
 
-# YOUR CODE FOR OPTION 2 GOES HERE
+
 
 # This funciton is responsible for loading
 # the deck from the file.
@@ -248,7 +242,6 @@ def rigorous_option():
     
     play_game(board)
 
-# YOUR CODE TO GET A CHOICE 1 or CHOCE 2 from a player GOES HERE
 
 # This function shows the main menu to select either 
 # rigorous or file option.
